@@ -17,6 +17,8 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("https://172.27.208.1:7279", "http://172.27.208.1:5045");
+
 // Add services to the container.
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
